@@ -36,8 +36,8 @@ In GLSL, the members of a vector can be accessed with subscripts, and sub-vector
 * `texture_uv_red_green.frag` performs tinting of the texture with a color based on the UV coordinates.
 * `tile.frag` repeats the texture twice in both the x and y directions.
 * `andy_warhol_looking_painting.frag` combines UV tinting with texture tiling.
-* `grayscale` calculates the luminance of each texel and uses it as the value for the red, green, and blue channels.
-* `grayscale_tint` tints the grayscale version of the image.
+* `grayscale.frag` calculates the luminance of each texel and uses it as the value for the red, green, and blue channels.
+* `grayscale_tint.frag` tints the grayscale version of the image.
 
 ### Special cases
 
