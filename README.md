@@ -1,0 +1,3 @@
+# Makin' Stuff Look Good
+
+[Makin' Stuff Look Good](https://www.youtube.com/channel/UCEklP9iLcpExB8vp_fWQseg) is a YouTube channel that focuses on how to improve the look of visual effects used in games. The channel itself focuses on how to produce effects using [Unity](https://unity3d.com/), but many of the concepts are not Unity specific. This repository aims to provide implementations of the various effects across multiple engines so that people can use the code for their favorite engine as a reference instead of having to mentally translate between shader languages or figure out what the equivalent setting for a particular effect is.
