@@ -1,4 +1,4 @@
-# (Shaders 101)[https://www.youtube.com/watch?v=T-HXmQAMhG0]
+# [Shaders 101](https://www.youtube.com/watch?v=T-HXmQAMhG0)
 
 An introduction to the mystical effects known as shaders. This section covers basics, such as setting basic colors, basing colors off of UV coordinates, and simple texturing.
 
