@@ -44,5 +44,5 @@ In GLSL, the members of a vector can be accessed with subscripts, and sub-vector
 There are some shader effects covered in the video that are not controlled entirely from within the shader:
 
 * `texture_no_alpha` is done by setting the blend mode outside of the shader.
-* `texture_tween` is not implemented because I'm not sure how to send multiple textures to a shader using LOVE.
+* `texture_tween` sends the second texture to use as a `uniform` variable.
 * `additive_blending` is also done by setting the blend mode outside of the shader.

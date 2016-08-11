@@ -4,6 +4,7 @@ local examples = {
   --[["texture_tween",]] "tile", "andy_warhol_looking_painting", "grayscale",
   "grayscale_tint", --[["additive_blending"]]
 }
+local texture_tween
 
 local shaders = {}
 local image
@@ -12,8 +13,10 @@ function love.load()
   for _, shader in ipairs(examples) do
     shaders[shader] = love.graphics.newShader(shader .. ".frag")
   end
+  texture_tween = love.graphics.newShader("texture_tween.frag")
 
   image = love.graphics.newImage('kirby.png')
+  tween_image = love.graphics.newImage('kirby_wave.png')
 end
 
 function love.draw()
@@ -38,8 +41,13 @@ function love.draw()
   love.graphics.setShader(shaders['texture'])
   love.graphics.draw(image, delta_x * 0, delta_y * 2)
 
-  -- I'm not sure how to do texture tweening since LOVE doesn't appear to have a
-  -- way to send multiple textures (a.k.a. sampler2D) to a shader.
+  -- texture_tween requires sending a secondary texture by using a uniform
+  -- texture2D variable in the shader and using Shader:send to supply a value
+  -- to it.
+  love.graphics.setBlendMode('alpha', 'alphamultiply')
+  love.graphics.setShader(texture_tween)
+  texture_tween:send('secondary_texture', tween_image)
+  love.graphics.draw(image, delta_x * 1, delta_y * 2)
 
   -- additive_blending is done by setting the blend mode to 'add'.
   love.graphics.setBlendMode('add', 'alphamultiply')
